@@ -146,6 +146,8 @@ header nav ul {
   display: flex;
   justify-content: space-around;
   width: 100%;
+  padding-left: 0;
+  list-style: none;
 }
 
 footer {
@@ -199,6 +201,10 @@ aside {
   align-items: center;
   flex-flow: row wrap;
 }
+
+/* aside .form input {
+  width: 100%;
+} */
 
 /* Features */
 
@@ -381,7 +387,7 @@ flex-flow: row wrap;
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   /* Tablet Styles here */
   .content-wrapper {
     max-width: 640px;
@@ -389,20 +395,20 @@ flex-flow: row wrap;
   }
 
   header {
-    justify-content: flex-start;
+    justify-content: space-around;
   }
 
   header .content-wrapper {
-    width: 83%;
+    width: 100%;
     justify-content: space-between;
   }
 
   header nav {
-    width: 21%;
+    width: 25%;
   }
 
   header nav ul {
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   header .header-divider {
@@ -425,9 +431,6 @@ flex-flow: row wrap;
     margin-bottom: 0;
   }
 
-  footer .copyright {
-    width: 30%;
-  }
   /* Homepage */
 
   aside .content-wrapper .form-description,
@@ -462,11 +465,11 @@ flex-flow: row wrap;
   }
 
   .features .features-item-description {
-    width: 21%;
+    width: 100%;
   }
 
   .reviews article {
-    width: 73%;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
   }
@@ -512,8 +515,58 @@ flex-flow: row wrap;
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   /* Desktop Styles here */
+  .content-wrapper {
+    max-width: 1080px;
+    margin: 120px 0;
+  }
+
+  header nav {
+    width: 16%;
+  }
+
+  footer .content-wrapper {
+    width: 100%;
+  }
+
+  footer .contact {
+    width: 33%;
+  }
+
+  /* Homepage */
+
+  aside .content-wrapper .form-description,
+  aside .content-wrapper .form {
+    width: 33%;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+  aside .content-wrapper {
+    justify-content: space-around;
+  }
+
+  .features article {
+    flex-basis: 17%;
+    padding: 0 8%;
+  }
+
+  .reviews article div {
+    width: 45%;
+  }
+
+  /* About */
+  .mission-content p {
+    flex-basis: 47%;
+  }
+
+
+
+  /* FAQ */
+  .faq-content {
+    flex-basis: 47%;
+  }
 
 }
 
